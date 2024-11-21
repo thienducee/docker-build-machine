@@ -1,0 +1,8 @@
+services:
+  kernel_builder:
+    build: .
+    image: build-machine-dm3588
+    container_name: build-machine-dm3588
+    volumes:
+            - /home/fluidd/workspace/upwork/Dmytro/build-machine/sources:/mnt/dm3588
+    command: ["sh", "-c", "while true; do echo 'Running...'; sleep 3600; done"]
